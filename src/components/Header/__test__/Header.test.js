@@ -5,6 +5,21 @@ import Header from '../Header';
 
 describe("Header", ()=>{
    // if we want we can wrap each it test below under their own describe function, has no effect on the test
+    beforeEach(() => {
+        console.log("Running before each test");
+    });
+
+    beforeAll(() => {
+        console.log("Running once before all tests");
+    });
+
+    afterEach(() => {
+        console.log("Running after each test");
+    });
+
+    afterAll(() => {
+        console.log("Running once after all tests");
+    });
 
     it('should render same text passed into title prop', () => {
     render(<Header title="My Header" />);
